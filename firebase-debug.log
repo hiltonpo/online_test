@@ -1,0 +1,69 @@
+[debug] [2021-12-14T06:47:27.773Z] ----------------------------------------------------------------------
+[debug] [2021-12-14T06:47:27.774Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2021-12-14T06:47:27.774Z] CLI Version:   9.23.1
+[debug] [2021-12-14T06:47:27.774Z] Platform:      darwin
+[debug] [2021-12-14T06:47:27.774Z] Node Version:  v14.17.4
+[debug] [2021-12-14T06:47:27.775Z] Time:          Tue Dec 14 2021 14:47:27 GMT+0800 (台北標準時間)
+[debug] [2021-12-14T06:47:27.776Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-14T06:47:27.782Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-14T06:47:27.782Z] > authorizing via signed-in user (hiltonpo@g.ncu.edu.tw)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Applications/MAMP/htdocs/online_test/test
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[debug] [2021-12-14T06:48:11.036Z] TypeError: Cannot read property 'setRawMode' of null
+    at ReadStream.setRawMode (tty.js:76:28)
+    at Interface._setRawMode (readline.js:325:16)
+    at Interface.close (readline.js:448:10)
+    at ReadStream.ontermend (readline.js:231:10)
+    at ReadStream.emit (events.js:412:35)
+    at ReadStream.emit (domain.js:470:12)
+    at endReadableNT (internal/streams/readable.js:1317:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-12-14T06:48:11.052Z] Error: write EIO
+    at afterWriteDispatched (internal/stream_base_commons.js:156:25)
+    at writeGeneric (internal/stream_base_commons.js:147:3)
+    at WriteStream.Socket._writeGeneric (net.js:787:11)
+    at WriteStream.Socket._write (net.js:799:8)
+    at writeOrBuffer (internal/streams/writable.js:358:12)
+    at WriteStream.Writable.write (internal/streams/writable.js:303:10)
+    at Console.log (/usr/local/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Console.Writable.write (/usr/local/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (events.js:412:35)
+    at DerivedLogger.emit (domain.js:470:12)
+    at addChunk (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+    at readableAddChunk (/usr/local/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:280:11)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-12-14T06:48:11.336Z] TypeError: Cannot read property 'setRawMode' of null
+    at ReadStream.setRawMode (tty.js:76:28)
+    at Interface._setRawMode (readline.js:325:16)
+    at Interface.close (readline.js:448:10)
+    at PromptUI.close (/usr/local/lib/node_modules/firebase-tools/node_modules/inquirer/lib/ui/baseUI.js:58:13)
+    at PromptUI.onForceClose (/usr/local/lib/node_modules/firebase-tools/node_modules/inquirer/lib/ui/baseUI.js:35:10)
+    at process.emit (events.js:412:35)
+    at processEmit [as emit] (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:189:37)
+    at process.exit (internal/process/per_thread.js:169:15)
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/errorOut.js:20:17)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+[error] 
+[error] Error: An unexpected error has occurred.

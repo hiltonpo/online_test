@@ -1,0 +1,17 @@
+.events {
+    margin-bottom: 2px;
+    background: orange;
+    color:white;
+    padding: 0 6px;
+    border-radius: 12px;
+    flex-grow: inherit;
+    .title {
+        float: left;
+        font-size: 10px;
+    }
+    .from {
+        float: right;
+        font-size: 10px;
+    }
+}
+

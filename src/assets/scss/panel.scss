@@ -1,0 +1,91 @@
+#info-panel {
+    position: absolute;
+    width: 270px;
+    background: white;
+    border: 1px solid #ccc;
+    label {
+        font-size: .8rem;
+        color: #ccc;
+    }
+    button {
+        display: none;
+        border: none;
+        padding: 10px;
+        background: rgba(129, 127, 127, 0.747);
+        color: white;
+        cursor: pointer;
+    }
+    .close {
+        position: relative;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+    }
+    .title, .time-picker{
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        padding: 10px;
+    }
+    .description, .special {
+        text-align: center;
+        padding: 10px;
+    }
+    &.new button {
+        &.create {
+            display: block;
+            width: 50%;
+            float: left;
+            background: #74be00;
+        }
+        &.cancel {
+            display: block;
+            width: 50%;
+            float: left;
+        }
+    }
+
+    &.update button{
+        &.update{
+            display: block;
+            width: 50%;
+            float: left;
+            background: #74be00;
+        }
+        &.cancel {
+            display: block;
+            width: 50%;
+            float: left;
+        }
+        &.delete {
+            display: block;
+            float: left;
+            width: 100%;
+            background: #c21717;
+        }
+    }
+}
+
+#description {
+    width: 100%;
+}
+
+.error-msg {
+    display: none;
+    &.open {
+        display: block;
+        text-align: center;
+    }
+}
+
+.selected-date {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
