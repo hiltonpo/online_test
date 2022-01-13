@@ -13,10 +13,12 @@
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
     "css-loader": "^5.2.7",
+    "echarts": "^5.2.2",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "style-loader": "^2.0.0",
     "vue": "^3.0.0",
+    "vue-echarts": "^6.0.0",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0-0"
   },

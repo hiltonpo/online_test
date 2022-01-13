@@ -73,7 +73,6 @@ export default {
     }
   },
   computed:{
-    // bind value through get and set of computed
     title: {
       get() {
         return this.$store.state.eventInfo.title
@@ -118,75 +117,22 @@ export default {
       let newdate = new Date();
       let month = newdate.getMonth() + 1;
       this.currentMonth = month 
-      
     },
 
     createEvent() {
       this.$store.dispatch('createEventUI')
-      // // axios call create.php
-      // axios.post('http://localhost:8080/demo_hw/vue_calendar/event/create.php', {
-      //   title: this.$store.state.eventInfo.title,
-      //   start_time: this.$store.state.eventInfo.start_time,
-      //   end_time: this.$store.state.eventInfo.end_time,
-      //   description: this.$store.state.eventInfo.description,
-      //   date: this.$store.state.dateId,  //click .date-block save the date(dateId)
-      //   }, {headers:{'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}})
-      //   .then(response => {
-      //     console.log(response)
-      //     // if eventInfo is correct, then post event into eventData through Database
-      //     this.$store.state.eventIndex = this.$store.state.eventData.length  // build index of each event 
-      //     this.$store.state.eventData[this.$store.state.eventIndex] = Object.assign({}, response.data);  // post event into eventData[] array
-      //     console.log(this.$store.state.eventData);
-      //     this.$store.commit('closePanel')  // close panel
-      //     })
-      //   .catch(error => {
-      //     this.errorMessage = error.response
-      //     });
     },
 
     updateEvent() {
       this.$store.dispatch('updateEventUI')
-      // // axios call update.php
-      // axios.post('http://localhost:8080/demo_hw/vue_calendar/event/update.php', {
-      //   id: this.$store.state.currentId,
-      //   title: this.$store.state.eventInfo.title,
-      //   start_time: this.$store.state.eventInfo.start_time,
-      //   end_time: this.$store.state.eventInfo.end_time,
-      //   description: this.$store.state.eventInfo.description,
-      //   date: this.$store.state.eventInfo.date,
-      //   }, {headers:{'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}})
-      //   .then(response => {
-      //     console.log(response)
-      //     this.$store.state.eventData[this.$store.state.currentEventIndex] = Object.assign({}, this.$store.state.eventInfo);
-      //     this.$store.commit('closePanel')
-      //     })
-      //   .catch(error => {
-      //     this.errorMessage = error.response.data
-      //     });
-      
     },
 
     closePanel() {
       this.$store.commit('closePanel')
-
     },
 
     removeEvent() {
       this.$store.dispatch('removeEventUI')
-      // let id = this.$store.state.currentId // confirm which event want to delete by event's id
-      // axios.post('http://localhost:8080/demo_hw/vue_calendar/event/delete.php', {id:id},
-      //  {headers:{'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}})
-      //   .then(response => {
-      //     var result = confirm('Do you really want to delete?');
-      //     if (result) {
-      //       this.$store.state.eventData.splice(this.$store.state.currentEventIndex, 1);
-      //     }                                 // remove event
-      //     console.log(response) 
-      //     this.$store.commit('closePanel')  //close panel
-      //     })
-      //   .catch(error => {
-      //     this.errorMessage = error.response.data
-      //     });
     },
 
 
@@ -201,82 +147,4 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../assets/scss/panel.scss";
-
-// #info-panel {
-//     position: absolute;
-//     width: 270px;
-//     background: white;
-//     border: 1px solid #ccc;
-// }
-
-
-
-// #info-panel label {
-//     font-size: .8rem;
-//     color: #ccc;
-// }
-
-// #info-panel .close {
-//     position: relative;
-//     cursor: pointer;
-//     top: 10px;
-//     right: 10px;
-// }
-
-// #info-panel .title, #info-panel .time-picker {
-//     border-bottom: 1px solid #ccc;
-// }
-
-// #info-panel .title, #info-panel .time-picker, #info-panel .description {
-//     text-align: center;
-//     padding: 10px;
-// }
-
-// .error-msg {
-//     display: none;
-// }
-
-// .error-msg.open {
-//     display: block;
-//     text-align: center;
-// }
-
-// .selected-date {
-//     text-align: center;
-//     font-size: 1.4rem;
-// }
-
-// #description {
-//     width: 100%;
-// }
-
-// #info-panel button {
-//     display: none;
-//     border: none;
-//     padding: 10px;
-//     background: rgba(129, 127, 127, 0.747);
-//     color: white;
-//     cursor: pointer;
-// }
-
-// #info-panel.new button.create, #info-panel.new button.cancel {
-//     display: block;
-//     width: 50%;
-//     float: left;
-// }
-
-// #info-panel.update button.update, #info-panel.update button.cancel, #info-panel.update button.delete {
-//     display: block;
-//     width: 50%;
-//     float: left;
-// }
-
-// #info-panel.update button.delete {
-//     width: 100%;
-//     background: #c21717;
-// }
-
-// #info-panel.new button.create, #info-panel.update button.create, #info-panel.update button.update {
-//     background: #74be00;
-// }
 </style>

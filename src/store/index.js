@@ -34,17 +34,8 @@ export default createStore({
     // 關閉panel
     closePanel(state) {
       state.open = !open
-      state.errorMessage = ''  // clear errorMessage
+      state.errorMessage = ''  
     },
-
-    // create(state) {
-    //   if (state.eventInfo.start_time < state.eventInfo.end_time 
-    //     && state.eventInfo.title!=null
-    //     && state.eventInfo.start_time!=null  && state.eventInfo.end_time!=null) {
-    //     state.eventInfo.date = state.dateId;  
-    //     state.eventIndex = state.eventData.length;  
-    //     // state.eventData[state.eventIndex] = Object.assign({}, state.eventInfo);         
-    //   }
 
     // 開啟新panel
     newPanel (state) {
@@ -57,9 +48,6 @@ export default createStore({
       state.eventInfo = Object.assign({}, event);
       state.currentEventIndex = state.eventData.findIndex(item=> item.title === event.title);
       console.log(state.currentEventIndex)
-      // state.currentId = event.id;
-      // console.log(event.id);
-      // console.log(state.currentEventIndex); 
     },
     
     // use Vuex in strict mode
@@ -78,23 +66,6 @@ export default createStore({
     updateInfoDescription (state, description) {
       state.eventInfo.description = description
     },
-    
-
-
-
-    // updateEvent(state) {
-    //   if (state.eventInfo.start_time < state.eventInfo.end_time
-    //     && state.eventInfo.title!=null
-    //     && state.eventInfo.start_time!=null  && state.eventInfo.end_time!=null) {
-    //     state.eventData[state.currentEventIndex] = Object.assign({}, state.eventInfo);
-    //   }
-
-    // removeEvent(state) {
-    //   var result = confirm('Do you really want to delete?');
-    //   if (result) {
-    //     state.eventData.splice(state.currentEventIndex, 1);
-    //   }
-    // },
   },
   actions: {
     createEventUI({commit, state}) {

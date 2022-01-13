@@ -31,10 +31,21 @@ export default {
         .then(response => {
           console.log(response.data.data)
           this.holidayInfo = response.data.data
-          })
+        })
         .catch(error => {
           console.log(error.response.data)
-          });
+        });
+
+      axios.interceptors
+
+      // example.interceptors.request.use(
+      //   function (config) {
+      //     return config
+      //   },
+      //   function (error) {
+      //     return Promise.reject(error)
+      //   }
+      // )
     },
   },
   created() {

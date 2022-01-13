@@ -14,12 +14,14 @@
   </div>
 
   <router-view></router-view>
+  <chart></chart>
 </template>
 
 <script>
 
 import calendar from './components/calendar.vue'
 import panel from './components/panel.vue'
+import chart from './components/chart.vue'
 
 
 
@@ -30,7 +32,7 @@ export default {
   components: {
     calendar,
     panel,
-    // holiday,
+    chart
   },
   data() {
     return{
@@ -56,9 +58,6 @@ export default {
       this.monthTitle = year + "年" + month + "月"
       console.log(...this.monthTitle)
     },
-    aaa() {
-      
-    }
   },
   created() {
     this.timeformate()
@@ -96,6 +95,13 @@ export default {
 .holidays a:hover {
   text-decoration: none;
   transform: scale(1.5);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 </style>
